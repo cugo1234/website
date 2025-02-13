@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Paradise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #A7C7E7 url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&auto=format&fit=cover&q=80') no-repeat center center/cover;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .navbar {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .navbar a:hover {
+            color: #FFD700;
+        }
+        .banner {
+            text-align: center;
+            color: white;
+            padding: 100px 20px 50px;
+            cursor: pointer;
+        }
+        .banner .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .banner h2 {
+            font-size: 40px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .category {
+            width: 200px;
+            height: 250px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .category:hover img {
+            transform: scale(1.1);
+        }
+        .category .title {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .intro {
+            text-align: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            margin-top: 50px;
+            width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function showPaymentPage() {
+            window.location.href = "payment.html";
+        }
+        function showProducts() {
+            window.location.href = "products.html";
+        }
+        function showIntroduction() {
+            alert("Chào mừng bạn đến với Shopping Paradise! Chúng tôi cung cấp những sản phẩm thời trang chất lượng cao, phù hợp với mọi phong cách. Hãy khám phá ngay!");
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#sanpham" onclick="showProducts()">Sản phẩm</a>
+        <a href="#thanhtoan" onclick="showPaymentPage()">Thanh toán</a>
+    </div>
+    <div class="banner">
+        <div class="overlay">
+            <h2>Thiên đường mua sắm</h2>
+            <p>👜 Sang trọng – Thoải mái – Phù hợp mọi phong cách 👕</p>
+        </div>
+    </div>
+    <div class="categories" id="sanpham">
+        <div class="category">
+            <img src="https://png.pngtree.com/png-clipart/20210308/original/pngtree-fashion-womens-clothing-design-elements-trend-models-png-image_5761564.jpg" alt="Women">
+            <div class="title">Women</div>
+        </div>
+        <div class="category">
+            <img src="https://i.pinimg.com/236x/9d/c1/46/9dc146460a89db14d80d47893f9aca14.jpg" alt="Men">
+            <div class="title">Men</div>
+        </div>
+        <div class="category">
+            <img src="https://m.media-amazon.com/images/I/71eU5sHbuKL._AC_SL1500_.jpg" alt="Accessories">
+            <div class="title">Accessories</div>
+        </div>
+        <div class="category">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Vjxah-3ppRuC52rV24CRCG9qxyuXRS4ujg&s" alt="Shoes">
+            <div class="title">Shoes</div>
+        </div>
+        <div class="category">
+            <img src="https://images-cdn.ubuy.qa/660ac9157e5ea83b7c21c8c9-viromy-gold-hoop-earrings-set-for-women.jpg" alt="Earrings">
+            <div class="title">Earrings</div>
+        </div>
+    </div>
+    <div class="intro" id="gioithieu">
+        <h2>Giới thiệu về Shopping Paradise</h2>
+        <p>Chào mừng bạn đến với Shopping Paradise! Chúng tôi cung cấp những sản phẩm thời trang chất lượng cao, phù hợp với mọi phong cách. Hãy khám phá ngay!</p>
+    </div>
+</body>
+</html>
